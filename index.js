@@ -104,7 +104,7 @@ const constructLayerToDna = (_dna = [], _layers = [], _rarity) => {
   return mappedDnaToLayers;
 };
 
-// check if the given dna is contained within the given dnaList 
+// check if the given dna is contained within the given dnaList
 // return true if it is, indicating that this dna is already in use and should be recalculated
 const isDnaUnique = (_DnaList = [], _dna = []) => {
   let foundDna = _DnaList.find((i) => i.join("") === _dna.join(""));
@@ -174,7 +174,7 @@ const startCreating = async () => {
     let rarity = getRarity(editionCount);
     console.log('- rarity: ' + rarity);
 
-    // calculate the NFT dna by getting a random part for each layer/feature 
+    // calculate the NFT dna by getting a random part for each layer/feature
     // based on the ones available for the given rarity to use during generation
     let newDna = createDna(layers, rarity);
     while (!isDnaUnique(dnaListByRarity[rarity], newDna)) {
